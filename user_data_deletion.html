@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Data Selection</title>
+    <link rel="icon" href="/public/LbTdamon.png" type="image/x-icon" />
+    <title>User Data Deletion</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
+            text-align: center;
         }
         .container {
             max-width: 800px;
@@ -20,47 +22,23 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            text-align: center;
             color: #333;
         }
         p {
             color: #555;
             margin-bottom: 20px;
         }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            margin-bottom: 5px;
+        h2 {
             color: #333;
         }
-        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
+        .footer {
+            margin-top: 30px;
         }
-        input[type="checkbox"] {
-            margin-right: 10px;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        .privacy-link {
+        .contact-link {
             color: #007BFF;
             text-decoration: none;
         }
-        .privacy-link:hover {
+        .contact-link:hover {
             text-decoration: underline;
         }
     </style>
@@ -68,52 +46,20 @@
 <body>
 
 <div class="container">
-    <h1>User Data Selection</h1>
-    <p>Please select your data preferences and update your personal information as needed. For more details, see our 
-        <a href="privacy-policy.html" class="privacy-link">Privacy Policy</a>.
+    <h1>User Data Deletion</h1>
+    <p>If you wish to request the deletion of your account, please choose an option below. 
+        Your account will be disabled for security reasons, but we will keep your data as a record. 
+        You can access it again in the future if you wish to reactivate your account or if you have any further requests. 
+        Please contact us if you need assistance.
     </p>
-    <form action="/submit-data" method="POST">
-        <!-- Personal Information Section -->
-        <h2>Personal Information</h2>
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+    <h2>Account Options</h2>
+    
+    <p><strong>Choose an action:</strong></p>
+    <p><em>Request account deactivation (data will be kept as a record for future access)</em></p>
+    <p><em>Contact support for reactivation or further assistance</em></p>
 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-
-        <!-- Data Preferences Section -->
-        <h2>Data Preferences</h2>
-        <label>
-            <input type="checkbox" name="data_preference" value="opt_in" checked>
-            I agree to share my data for app-related services.
-        </label>
-
-        <label>
-            <input type="checkbox" name="data_preference" value="marketing">
-            I agree to receive marketing and promotional emails.
-        </label>
-
-        <label>
-            <input type="checkbox" name="data_preference" value="anonymous_data">
-            I agree to share my data anonymously for research purposes.
-        </label>
-
-        <!-- Update or Delete Section -->
-        <h2>Account Options</h2>
-        <label for="account_action">Choose an action:</label>
-        <select id="account_action" name="account_action">
-            <option value="update">Update my information</option>
-            <option value="delete">Delete my account</option>
-        </select>
-
-        <label for="feedback">Additional Comments:</label>
-        <textarea id="feedback" name="feedback" rows="4" placeholder="Enter any additional comments or preferences"></textarea>
-
-        <button type="submit">Submit</button>
-    </form>
+    <p>If you need further assistance, please <a href="mailto:farhatrkhalil@gmail.com" class="contact-link">contact us via email</a>.</p>
 </div>
 
 </body>
